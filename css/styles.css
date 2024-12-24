@@ -7,8 +7,8 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: monospace,sans-serif;
-    background-color: rgb(rgb(221, 221, 221));
-    background-image: url(images/background\(3\).jpg);
+    background-color: rgb(221, 221, 221);
+    background-image: url('/images/background(3).jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 105%;
