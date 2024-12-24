@@ -1,34 +1,88 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
 html, body {
     padding: 0;
     margin: 0;
-    top: 0;
-    font-family: sans-serif;
+    font-family: monospace,sans-serif;
+    background-color: rgb(rgb(221, 221, 221));
+    background-image: url(/src/background\(3\).jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 105%;
+    background-attachment: fixed;
+    overflow-x: hidden;
 }
 
+body {
+    padding-top: 5rem;
+}
 
 #header {
+    top: 0;
+    left: 0;
     position: fixed;
     display: flex;
-    width: 100vw;
-    padding: 0.5rem 0;
-    background-color: #333;
-    z-index: 10;
+    width: 100%;
+    height: 5rem;
+    background-color: #242424;
+    z-index: 1000;
     justify-content: space-between;
+    align-items: center;
+    padding: 0;
 }
-#header>h4{
+
+#nick>h4{
     margin: auto 0;
     padding: 0;
     color: #fff;
 }
-#header>button>img{
-    width: 40px;
-    height: 40px;
+#nick>a>img{
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#nick {
+    display: flex;
+
 }
 #navContainer{
     display: flex;
     justify-content: center;
-    flex-grow: 1;
+    align-items: center;
 }
+
+#contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding-right: 5px;
+    margin-left: 10%;
+}
+
+.redesSociales {
+    width: 25px;
+    font-size: 25px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+.redesSociales:link, .redesSociales:visited, .redesSociales:active {
+    color: white;
+}
+
+.redesSociales:hover {
+    color: white;
+    background-color: rgb(63, 63, 63);
+    border-radius: 5px;
+}
+
+
 #navList {
     display: flex;
     justify-content: center;
@@ -46,50 +100,59 @@ html, body {
     font-weight: bold;
 }
 
-#fondo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(20,20,20);
-    width: 100vw;
-    height: 100vh;
-    color: aliceblue;
-}
-
-#ppal{
-    display: flex;
-    justify-content: center;
-    align-items: start;
+#seccion_negra {
+    background-color: rgba(51, 54, 51,80%);
+    border: 5px solid #ffffff;
+    width: 70%;
+    height: 200vh;
+    margin: 10px auto;
+    border-radius: 30px;
+    color: white;
     flex-direction: column;
 }
-#personalInfo {
-    display: flex;
-    position: relative;
-    padding: 0;
-    text-align: center;
-    color: #fff;
-    border: 4px solid white;
-    width: 50vw;
-    height: 25vh;
-    z-index: 1;
-}
-#personalInfo>p {
-    margin: 0;
+
+#ppal {
+    padding: 10px 5%;
 }
 
-#titulo{
+#me {
+    height: auto;
     display: flex;
-    position: relative;
-    padding: 0;
-    margin: 0 0 0 0;
-    text-align: center;
-    color: #fff;
-    border: 4px solid white;
-    border-bottom: transparent;
-    width: 30%;
-    height: 25px;
-    z-index: 1;
+    margin-top: 25px;
+    justify-content: space-between;
 }
+#textoMe{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#fotoPerfil {
+    width: 150px;
+    border-radius: 50%;
+    border: 4px solid orange ;
+}
+
+.dot {
+    color:rgb(161, 16, 197);
+    font-size: 35px;
+}
+
+#textoMe>h1 {
+    font-size: 45px;
+    margin: 5px 0;
+}
+
+#sobreMi>h1 {
+    color: orange;
+}
+
+#sobreMi>p {
+    font-size: 13px;
+}
+
+
 #titulo>h4{
     margin: auto 15px;
     padding: auto;

@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Portafolio</title>
+    <script src="https://kit.fontawesome.com/9b8a2b0a6f.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!--
+    <img id="background" src="/src/background.jpg" alt="fondo codigo binario">
+    -->
     <header id="header">
-        <h4>Dario Morales A.</h4>
+        <div id="nick">
+            <a><img src="/src/fotoPerfil.jpg"></a>
+            <h4>Dario Morales A.</h4>
+        </div>
         <div id="navContainer">
             <nav>
                 <ul id="navList">
@@ -18,17 +25,36 @@
                 </ul>
             </nav>
         </div>
-        <button><img src="src/images.png"></button>
-    </header>
-    <section id="fondo">
-        <div id="ppal">
-            <div id="titulo">
-                <h4>Sobre mi</h4>
-            </div>
-            <div id="personalInfo">
-                <p>hola soy goku</p>
-            </div>
+        <div id="contacto">
+            <a href="https://github.com/DarioMorales24" target="_blank" class="redesSociales"><i class="fa-brands fa-github"></i></a>
+            <a href="url" class="redesSociales"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:dm.andrades2706@gmail.com" class="redesSociales"><i class="fa-solid fa-envelope"></i></a>
         </div>
+        
+    </header>
+
+    <main id="seccion_negra">
+        <section id="ppal">
+            <div id="me">
+                <!--contenedor para el texto ppal-->
+                <div id="textoMe">
+                    <h1><a class="dot">&lt</a>Dario Morales<a class="dot">&gt</a></h1>
+                    <p>Desarrollador de software fullstack</p>
+                </div>
+                <img id="fotoPerfil" src="/src/fotoPerfil.jpg" alt="foto_perfil">
+            </div>
+            <div id="sobreMi">
+                <h1><a class="dot">.</a>Sobre mi</h1>
+                <p>¡Hola soy Dario! Futuro ingeniero informático del 
+                    Instituto DuocUC. Curioso, autodidacta y responsable. 
+                    Vivo en Santiago, Chile. Me esfuerzo diariamente en 
+                    mejorar mis capacidades para trabajar en lo que 
+                    me apasiona </p>
+            </div>
+        </section>
+    </main>
+    <section>
+
     </section>
 </body>
 </html>
