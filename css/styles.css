@@ -12,6 +12,7 @@ html, body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 105%;
+    background-size: cover;
     background-attachment: fixed;
     overflow-x: hidden;
 }
@@ -157,3 +158,72 @@ body {
     margin: auto 15px;
     padding: auto;
 }
+
+/*habilidades*/
+
+#habilidades {
+    padding: 10px 5%;
+}
+
+#habilidades>h1 {
+    color: orange;
+}
+
+.circulos{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cicle2 {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 87px;
+    height: 87px;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(0,0,0);
+    z-index: 1;
+    animation: none;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    background: conic-gradient(
+        transparent calc((1 - var(--conocimiento)) * 360deg),
+        orange calc((1 - var(--conocimiento)) * 360deg),
+        orange 360deg
+    );
+    animation: fadeIn 2s forwards;
+}
+
+.hability {
+    font-size: 15px;
+    font-weight: 100;
+}
+
+/*Animacion circles*/
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    };
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+
+
