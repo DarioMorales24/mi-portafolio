@@ -204,8 +204,9 @@ body {
     justify-content: center;
     position: relative;
     background: conic-gradient(
-        transparent calc((var(--conocimiento)) * 360deg),
-        orange calc((var(--conocimiento)) * 360deg),
+        transparent calc((1 - var(--conocimiento)) * 360deg),
+        orange calc((1 - var(--conocimiento)) * 360deg),
+        orange 360deg
     );
     animation: fadeIn 2s forwards;
 }
