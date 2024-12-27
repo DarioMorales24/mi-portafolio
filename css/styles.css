@@ -256,7 +256,7 @@ body {
     width: 100%;
     height: 150px;
     gap: 20px;
-    background-image: url(/images/images-referencia.jpg); /*Cambiar esta imagen segun el proyecto*/
+    background-image: url('images/images-referencia.jpg'); /*Cambiar esta imagen segun el proyecto*/
     background-size: 100%;
     background-position: top;
     text-decoration: none;
