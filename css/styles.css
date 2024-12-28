@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     padding: 0;
     margin: 0;
@@ -139,7 +145,7 @@ body {
     border: 4px solid orange ;
 }
 
-.dot {
+.punto {
     color:rgb(161, 16, 197);
     font-size: 35px;
 }
@@ -169,61 +175,149 @@ body {
     margin: 10px 5%;
 }
 
-#habilidades>h1, #pagProyectos>h1 {
+#habilidades>h1 {
     color: orange;
 }
 
-.circulos{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.cicle2 {
-    border: 1px solid #fff;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    align-items: center;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    background-color: rgb(0,0,0);
-    z-index: 1;
-    animation: none;
-}
-
-.circle {
-    border-radius: 50%;
-    width: 130px;
-    height: 130px;
-    align-items: center;
-    display: flex;
-    text-align: center;
-    justify-content: center;
+.container{
     position: relative;
-    background: conic-gradient(
-        transparent calc((1 - var(--conocimiento)) * 360deg),
-        orange calc((1 - var(--conocimiento)) * 360deg),
-        orange 360deg
-    );
-    animation: fadeIn 2s forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.hability {
-    font-size: 15px;
-    font-weight: 100;
+.container .card {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIN 1s linear forwards;
 }
 
-/*
+.container .card::before {
+    opacity: 0;
+    animation: fadeIN 1s linear forwards;
+}
 
-*/
+.container .card .percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.container .card .percent svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+
+.container .card .percent svg circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2;
+    stroke: #191919;
+    transform: translate(5px,5px);
+}
+
+.container .card .percent svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 441;
+    stroke-dashoffset: calc(441 - (441 * var(--num))/ 100);
+    opacity: 0;
+    animation: fadeIN 1s linear forwards;
+    animation-delay: 3.5s;
+}
+
+@keyframes fadeIN {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.dot{
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    animation: animateDot 2s linear forwards;
+    animation-delay: 1s;
+}
+
+@keyframes animateDot {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+
+.dot::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--clr);
+
+    box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
+}
+
+.number {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIN 1s linear forwards;
+    animation-delay: 3.5s;
+}
+
+.number h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 700px;
+    font-size: 2.5em;
+}
+
+.number h2 span {
+    font-weight: 300;
+    color: #fff;
+    font-size: 0.5em;
+}
+
+.number p {
+    font-weight: 300;
+    font-size: 0.75em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+}
 
 /*Proyectos*/
 
 #pagProyectos {
     margin: 10px 5%
+}
+
+#pagProyectos>h1 {
+    color: orange;
 }
 
 #proyectos{
@@ -232,7 +326,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    aspect-ratio: 16/5;
+    aspect-ratio: 16/6;
 }
 
 .btnProyecto{
@@ -246,6 +340,7 @@ body {
     overflow: hidden;
     position: relative;
     transition: height 0.5s ease, transform 0.5s ease;
+    z-index: 22;
 }
 
 .box-upper{
@@ -271,7 +366,7 @@ body {
     font-size: 35px;
     display: inline-block;
     transition: opacity 0s ease, transform 0s ease, visibility 0s ease;
-    z-index: 2;
+    z-index: 22;
 }
 
 .btnProyecto:hover {
@@ -279,12 +374,11 @@ body {
     transform: scale(1.1);
     background-color: rgb(63, 63, 63);
     height: 200px;
-    
     transition: 
     transform 0.5s ease, 
     background-color 0.5s ease,
     height 0.5s ease;
-    z-index: 2;
+    z-index: 22;
 }
 
 .btnProyecto:hover .nombreProyecto{
@@ -316,7 +410,7 @@ body {
     max-height: 168px;
     background-color: rgba(0, 0, 0, 0);
     transition: background-color 0.5s ease;
-    z-index: 1;
+    z-index: 21;
     border-radius: 0px 9px 0px 0px;
 }
 
