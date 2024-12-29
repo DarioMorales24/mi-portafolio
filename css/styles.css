@@ -232,7 +232,7 @@ body {
     stroke-dashoffset: calc(441 - (441 * var(--num))/ 100);
     opacity: 0;
     animation: fadeIN 1s linear forwards;
-    animation-delay: 3.5s;
+    animation-delay: 2.5s;
 }
 
 @keyframes fadeIN {
@@ -248,7 +248,7 @@ body {
     position: absolute;
     inset: 5px;
     z-index: 10;
-    animation: animateDot 2s linear forwards;
+    animation: animateDot 1s linear forwards;
     animation-delay: 1s;
 }
 
